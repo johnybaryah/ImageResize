@@ -13,13 +13,21 @@ namespace ImageResize
         async static Task Main(string[] args)
         {
             var resizer = new ImageResizer(1500, 100L);
-            var outputStream = resizer.Resize(@"C:\original_images\app_bzIwMDkyM0VvM215ZURKNjZyM0VZWDlxeW1f_4639613.tiff", ImageFormat.Tiff);
-            using (outputStream)
-            using (var file = File.Create($@"C:\imageresize\{Guid.NewGuid()}.{ImageFormat.Tiff.ToString()}"))
+
+            var allFiles = System.IO.Directory.GetFiles(@"C:\original_images\amandeep\");        
+
+            foreach (var file in allFiles)
             {
-                outputStream.Seek(0, SeekOrigin.Begin);
-                await outputStream.CopyToAsync(file);
+                var outputStream = resizer.Resize(file, ImageFormat.Tiff);
+                using (outputStream)
+                using (var fileStream = File.Create($@"C:\imageresize\{Path.GetFileName(file)}"))
+                {
+                    outputStream.Seek(0, SeekOrigin.Begin);
+                    await outputStream.CopyToAsync(fileStream);
+                }    
             }
+
+            allFiles.ToList().ForEach(file => File.Delete(file));
         }
     }
 
@@ -44,8 +52,8 @@ namespace ImageResize
 
             if (string.IsNullOrEmpty(inputPath))
                 throw new ArgumentNullException(nameof(inputPath), "input path is null. What do you expect me to resize?");
-
-            using (var image = new Bitmap(System.Drawing.Image.FromFile(inputPath)))
+            using(var img = System.Drawing.Image.FromFile(inputPath))
+            using (var image = new Bitmap(img))
             {
                 int width, height = 0;
                 

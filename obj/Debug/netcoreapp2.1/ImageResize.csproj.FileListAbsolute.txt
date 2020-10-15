@@ -4,8 +4,9 @@ C:\Users\amandees\source\repos\ImageResize\bin\Debug\netcoreapp2.1\ImageResize.r
 C:\Users\amandees\source\repos\ImageResize\bin\Debug\netcoreapp2.1\ImageResize.dll
 C:\Users\amandees\source\repos\ImageResize\bin\Debug\netcoreapp2.1\ImageResize.pdb
 C:\Users\amandees\source\repos\ImageResize\obj\Debug\netcoreapp2.1\ImageResize.csprojAssemblyReference.cache
-C:\Users\amandees\source\repos\ImageResize\obj\Debug\netcoreapp2.1\ImageResize.csproj.CoreCompileInputs.cache
 C:\Users\amandees\source\repos\ImageResize\obj\Debug\netcoreapp2.1\ImageResize.AssemblyInfoInputs.cache
 C:\Users\amandees\source\repos\ImageResize\obj\Debug\netcoreapp2.1\ImageResize.AssemblyInfo.cs
+C:\Users\amandees\source\repos\ImageResize\obj\Debug\netcoreapp2.1\ImageResize.csproj.CoreCompileInputs.cache
 C:\Users\amandees\source\repos\ImageResize\obj\Debug\netcoreapp2.1\ImageResize.dll
 C:\Users\amandees\source\repos\ImageResize\obj\Debug\netcoreapp2.1\ImageResize.pdb
+C:\Users\amandees\source\repos\ImageResize\obj\Debug\netcoreapp2.1\ImageResize.genruntimeconfig.cache
